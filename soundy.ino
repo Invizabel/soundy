@@ -5,8 +5,8 @@ void setup()
   TCCR1A = _BV(COM1A0);
   TCCR1B = _BV(WGM12) | _BV(CS10);
   
-  // 40 kHz output at 199; 400 Hz at 1990:
-  OCR1A = 1990;
+  // 40 kHz output at 199 (Distance sensor); 25 kHz output at 319 (Dog trainer); 400 Hz at 1990 (Audible to humans):
+  OCR1A = 319;
 
   pinMode(ULTRASONIC_PIN, OUTPUT);
 }
